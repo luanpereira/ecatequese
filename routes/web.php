@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/', 'CatequistaController@getIndex')->name('catequistas');
+
+//CATEQUISTAS
+/*Route::group(['prefix' => 'admin/catequistas'], function () {
+    Route::get('/', 'CatequistaController@getIndex')->name('catequistas');
+    Route::get('/create', 'CatequistaController@getCreate')->name('catequistas');
+    Route::post('/create', 'CatequistaController@postCreate')->name('catequistas');
+    Route::get('/edit/{id}', 'CatequistaController@getEdit')->name('catequistas');
+    Route::put('/edit/{id}', 'CatequistaController@putEdit')->name('catequistas');
+    Route::post('/delete', 'CatequistaController@postDelete')->name('catequistas');
+});*/
